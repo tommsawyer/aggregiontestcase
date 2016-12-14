@@ -11,6 +11,13 @@ class AggregionAPI {
       }).get().$promise;
   }
 
+  getBookInfo(id) {
+    return this.resource('https://ds.aggregion.com/api/public/catalog/' + id, {}, { 
+        get: { method: 'GET'}
+      }).get().$promise;
+
+  }
+
   getBookCover(id) {
     return new Promise(function(resolve, reject) {
       var image = document.createElement('img');

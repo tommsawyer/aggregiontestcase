@@ -11,9 +11,11 @@ class BookCover {
   link(scope, element, attrs) {
     this.api.getBookCover(attrs.id)
       .then(function(image) {
+        image.class = attrs.class;
         element.append(image);
       })
       .catch(function(image) {
+        image.class = attrs.class;
         element.append(image);
       });
   }
