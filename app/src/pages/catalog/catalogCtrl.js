@@ -3,7 +3,6 @@
 class CatalogController {
   constructor($scope, $state, AggregionAPI, loadedBooks) {
     $scope.loadedBooks = loadedBooks;
-    window.b = loadedBooks;
   }
 }
 

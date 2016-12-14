@@ -6,7 +6,7 @@ export default {
       return AggregionAPI.getAllBooks();
     }
   },
-  url        : '/app/',
+  url        : '/',
   template   : require('../pages/catalog/catalog.html'),
   controller : 'catalogCtrl'
 }

@@ -1,11 +1,12 @@
 'use strict';
 
-import 'angular-material/angular-material.css';
-
 import angular           from 'angular';
+
+import 'angular-material/angular-material.css';
+import 'angular-ui-router/release/angular-ui-router.js';
+
 import ngMaterial        from 'angular-material';
 import ngResource        from 'angular-resource';
-import uiRouter          from 'angular-ui-router/release/angular-ui-router.js';
 
 import AggregionAPI      from './src/services/aggregionAPI.js';
 import BookCover         from './src/directives/bookCover/bookCover.js';

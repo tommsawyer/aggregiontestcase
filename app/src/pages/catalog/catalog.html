@@ -8,11 +8,12 @@
                   md-row-height="1:1.5">
 
       <md-grid-tile ng-repeat='book in loadedBooks'>
-        <!-- <img src="https://storage.aggregion.com/api/files/12ce171be47031a58f6d12ddefca93d52bda709b1b720d50cf48747d6cd44cb6/shared/data" alt="{{book.title.default}}" /> -->
-        <book-cover id={{book.cover}} />
-        <md-grid-tile-footer>
-          <h4>{{book.title.default}}</h4>
-        </md-grid-tile-footer>
+        <a href='{{"/book/" + book.id}}'>
+          <book-cover id={{book.cover}} />
+          <md-grid-tile-footer>
+            <h4>{{book.title.default}}</h4>
+          </md-grid-tile-footer>
+        </a>
       </md-grid-tile>
 
     </md-grid-list>
