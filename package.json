@@ -1,0 +1,26 @@
+{
+  "name": "aggregiontestcase",
+  "version": "1.0.0",
+  "description": "Small library app",
+  "main": "./app/catalog.js",
+  "repository": "https://github.com/tommsawyer/aggregiontestcase.git",
+  "scripts": {
+    "test":  "echo \"Error: no test specified\" && exit 1",
+    "dev":   "node ./node_modules/.bin/webpack-dev-server --content-base app",
+    "build": "NODE_ENV=production node ./node_modules/.bin/webpack"
+  },
+  "keywords": [],
+  "author": "Denis Maximov",
+  "license": "WTFPL",
+  "dependencies": {
+    "angular": "^1.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "css-loader": "^0.26.1",
+    "raw-loader": "^0.5.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
