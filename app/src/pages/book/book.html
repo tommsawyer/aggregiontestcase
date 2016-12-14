@@ -3,28 +3,22 @@
 </md-button>
 
 <md-card>
-  <book-cover class='md-card-image' id='loadedBook.id'/>
+
   <md-card-title>
+    <book-cover class='md-card-image md-card-media' id='{{loadedBook.cover}}'/>
     <md-card-title-text>
-      <span class="md-headline">In-card mixed actions</span>
+      <span class="md-headline">{{ loadedBook.title.default }}</span>
     </md-card-title-text>
   </md-card-title>
-  <md-card-actions layout="row" layout-align="start center">
-    <md-card-icon-actions>
-      <md-button class="md-icon-button" aria-label="Favorite">
-        <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
-      </md-button>
-      <md-button class="md-icon-button" aria-label="Share">
-        <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
-      </md-button>
-    </md-card-icon-actions>
-    <md-button>Action 1</md-button>
-    <md-button>Action 2</md-button>
-  </md-card-actions>
   <md-card-content>
     <p>
-    The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-    two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+    {{ loadedBook.description.default  }}
     </p>
+    <md-list flex>
+      <md-subheader class="md-no-sticky"> Бандлы </md-subheader>
+      <md-list-item ng-repeat="bundle in bundles">
+        <book-cover id="bundle.resourceId" /> 
+      </md-list-item>
+    </md-list>
   </md-card-content>
 </md-card>

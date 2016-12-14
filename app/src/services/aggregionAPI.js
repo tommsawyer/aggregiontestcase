@@ -15,7 +15,12 @@ class AggregionAPI {
     return this.resource('https://ds.aggregion.com/api/public/catalog/' + id, {}, { 
         get: { method: 'GET'}
       }).get().$promise;
+  }
 
+  getBookBundles(id) {
+    return this.resource('https://ds.aggregion.com/api/public/catalog/' + id + '/bundles', {}, { 
+        get: { method: 'GET', isArray: true }
+      }).get().$promise;
   }
 
   getBookCover(id) {
