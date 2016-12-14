@@ -1,0 +1,11 @@
+.book-link {
+  overflow: hidden;
+}
+
+.book-preview {
+  transition: all .5s ease-out;
+}
+.book-preview:hover {
+  transform: scale(1.05);
+  z-index: -150;
+}

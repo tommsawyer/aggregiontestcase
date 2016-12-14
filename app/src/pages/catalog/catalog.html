@@ -1,21 +1,23 @@
-<div class='books-container'>
-  <md-content layout-padding>
-    <md-grid-list md-cols-sm="3"
-                  md-cols-md="4"
-                  md-cols-lg="6"
-                  md-cols-gt-lg="8"
-                  md-gutter="1em"
-                  md-row-height="1:1.5">
+<md-content layout-padding class='books'>
+  <md-grid-list md-cols-sm="3"
+                md-cols-md="4"
+                md-cols-lg="6"
+                md-cols-gt-lg="8"
+                md-gutter="1em"
+                md-row-height="1:1.5">
 
-      <md-grid-tile ng-repeat='book in loadedBooks'>
-        <a ui-sref="book({book_id: book.id})">
-          <book-cover id={{book.cover}} />
+    <md-grid-tile ng-repeat='book in loadedBooks'>
+      <md-wireframe>
+        <a class='book-link' ui-sref="book({book_id: book.id})">
+          <div class='book-preview'>
+            <book-cover id={{book.cover}} />
+          </div>
           <md-grid-tile-footer>
             <h4>{{book.title.default}}</h4>
           </md-grid-tile-footer>
         </a>
-      </md-grid-tile>
+      </md-wireframe>
+    </md-grid-tile>
 
-    </md-grid-list>
-  </md-content>
-</div>
+  </md-grid-list>
+</md-content>

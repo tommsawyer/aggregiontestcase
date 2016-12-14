@@ -2,6 +2,7 @@
 
 import angular           from 'angular';
 
+import './src/styles.css';
 import 'angular-material/angular-material.css';
 import 'angular-ui-router/release/angular-ui-router.js';
 

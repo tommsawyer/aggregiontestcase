@@ -4,7 +4,6 @@ class BookController {
   constructor($scope, $state, loadedBook, bundles) {
     $scope.loadedBook = loadedBook;
     $scope.bundles = bundles;
-    console.log(bundles);
   }
 }
 
