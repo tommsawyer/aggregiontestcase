@@ -17,7 +17,7 @@
     <md-list flex>
       <md-subheader class="md-no-sticky"> Файлы </md-subheader>
       <md-list-item ng-repeat="bundle in book.bundles">
-        <md-button ng-href='{{"https://storage.aggregion.com/api/files/" + bundle.resourceId + "/shared/data"}}'
+        <md-button ng-href='{{book.API.getResourceUrl(bundle.resourceId)}}'
           class='md-raised' >
           Скачать
         </md-button>

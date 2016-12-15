@@ -6,7 +6,7 @@ export default {
       return AggregionResource.book($stateParams.book_id).get().$promise;
     },
     bundles: function(AggregionResource, $stateParams) {
-      return AggregionResource.bookBundles($stateParams.book_id).get().$promise;
+      return AggregionResource.book($stateParams.book_id).bundles().$promise;
     }
   },
   url         : '/book/:book_id',

@@ -2,7 +2,7 @@
 
 class BookCover {
   constructor(AggregionAPI) {
-    this.api = AggregionAPI;
+    this.AggregionAPI = AggregionAPI;
 
     this.restrict = 'E';
     this.template = '<img/>';
@@ -10,10 +10,11 @@ class BookCover {
   }
 
   link(scope, element, attrs) {
-    attrs.$observe('id', (id) => attrs.$set('src', AggregionAPI.getImageUrl(id)));
+    var self = this;
+    attrs.$observe('id', (id) => attrs.$set('src', this.AggregionAPI.getResourceUrl(id)));
 
     element.bind('error', function() {
-      attrs.$set('src', AggregionAPI.DEFAULT_COVER);
+      attrs.$set('src', self.AggregionAPI.DEFAULT_COVER);
     });
   }
   

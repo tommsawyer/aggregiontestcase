@@ -3,7 +3,7 @@
 export default {
   resolve      : { 
     loadedBooks: function(AggregionResource) {
-      return AggregionResource.books().get().$promise;
+      return AggregionResource.book().query().$promise;
     }
   },
   url          : '/',

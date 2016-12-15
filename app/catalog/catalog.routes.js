@@ -1,8 +1,8 @@
 'use strict';
 
-import stateNotFound from './states/notFound.js';
-import stateCatalog  from './states/catalog.js';
-import stateBook     from './states/book.js';
+import stateNotFound from './states/notfound.state.js';
+import stateCatalog  from './states/catalog.state.js';
+import stateBook     from './states/book.state.js';
 
 const html5ModeConfig = { enabled: true, requireBase: false };
 

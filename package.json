@@ -2,11 +2,11 @@
   "name": "aggregiontestcase",
   "version": "1.0.0",
   "description": "Small library app",
-  "main": "./app/catalog.js",
+  "main": "./dist/bundle.js",
   "repository": "https://github.com/tommsawyer/aggregiontestcase.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./node_modules/.bin/webpack-dev-server --content-base ./build",
+    "dev": "node ./node_modules/.bin/webpack-dev-server --content-base ./dist",
     "build": "NODE_ENV=production node ./node_modules/.bin/webpack"
   },
   "keywords": [],
@@ -17,7 +17,7 @@
     "angular-animate": "^1.5.9",
     "angular-aria": "^1.5.9",
     "angular-material": "^1.1.1",
-    "angular-resource": "^1.6.0",
+    "angular-resource": "1.5.9",
     "angular-ui-router": "^0.3.2"
   },
   "devDependencies": {
