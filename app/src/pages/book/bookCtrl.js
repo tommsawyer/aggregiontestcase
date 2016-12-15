@@ -1,12 +1,12 @@
 'use strict';
 
 class BookController {
-  constructor($scope, $state, loadedBook, bundles) {
-    $scope.loadedBook = loadedBook;
-    $scope.bundles = bundles;
+  constructor($state, loadedBook, bundles) {
+    this.loadedBook = loadedBook;
+    this.bundles    = bundles;
   }
 }
 
-BookController.inject = ['$scope', '$state', 'loadedBook', 'bundles'];
+BookController.inject = ['$state', 'loadedBook', 'bundles'];
 
 export default BookController;

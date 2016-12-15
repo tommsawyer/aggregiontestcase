@@ -1,11 +1,11 @@
 'use strict';
 
 class CatalogController {
-  constructor($scope, $state, AggregionAPI, loadedBooks) {
-    $scope.loadedBooks = loadedBooks;
+  constructor($state, loadedBooks) {
+    this.loadedBooks = loadedBooks;
   }
 }
 
-CatalogController.$inject = ['$scope', '$state', 'AggregionAPI','loadedBooks' ];
+CatalogController.$inject = ['$state', 'loadedBooks' ];
 
 export default CatalogController;

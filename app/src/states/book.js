@@ -2,14 +2,15 @@
 
 export default {
   resolve: {
-    loadedBook: function(AggregionAPI, $stateParams) {
-      return AggregionAPI.getBookInfo($stateParams.book_id);
+    loadedBook: function(AggregionResource, $stateParams) {
+      return AggregionResource.book($stateParams.book_id).get().$promise;
     },
-    bundles: function(AggregionAPI, $stateParams) {
-      return AggregionAPI.getBookBundles($stateParams.book_id);
+    bundles: function(AggregionResource, $stateParams) {
+      return AggregionResource.bookBundles($stateParams.book_id).get().$promise;
     }
   },
-  url: '/book/{:book_id}',
-  template: require('../pages/book/book.html'),
-  controller: 'bookCtrl'
+  url         : '/book/:book_id',
+  template    : require('../pages/book/book.html'),
+  controller  : 'bookCtrl',
+  controllerAs: 'book'
 }

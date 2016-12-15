@@ -5,20 +5,20 @@
 <md-card>
 
   <md-card-title>
-    <book-cover class='md-card-image md-card-media' id='{{loadedBook.cover}}'/>
+    <book-cover class='md-card-image md-card-media' id='{{book.loadedBook.cover}}'/>
     <md-card-title-text>
-      <span class="md-headline">{{ loadedBook.title.default }}</span>
+      <span class="md-headline">{{ book.loadedBook.title.default }}</span>
     </md-card-title-text>
   </md-card-title>
   <md-card-content>
     <p>
-    {{ loadedBook.description.default  }}
+    {{ book.loadedBook.description.default  }}
     </p>
     <md-list flex>
       <md-subheader class="md-no-sticky"> Файлы </md-subheader>
-      <md-list-item ng-repeat="bundle in bundles">
+      <md-list-item ng-repeat="bundle in book.bundles">
         <md-button ng-href='{{"https://storage.aggregion.com/api/files/" + bundle.resourceId + "/shared/data"}}'
-          class='md-raised download_btn' >
+          class='md-raised' >
           Скачать
         </md-button>
       </md-list-item>

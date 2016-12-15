@@ -3,21 +3,18 @@
 class BookCover {
   constructor(AggregionAPI) {
     this.api = AggregionAPI;
-    this.scope = {};
 
     this.restrict = 'E';
+    this.template = '<img/>';
+    this.replace  = true;
   }
 
   link(scope, element, attrs) {
-    this.api.getBookCover(attrs.id)
-      .then(function(image) {
-        image.className = attrs.class;
-        element.append(image);
-      })
-      .catch(function(image) {
-        image.className = attrs.class;
-        element.append(image);
-      });
+    attrs.$observe('id', (id) => attrs.$set('src', AggregionAPI.getImageUrl(id)));
+
+    element.bind('error', function() {
+      attrs.$set('src', AggregionAPI.DEFAULT_COVER);
+    });
   }
   
   static getInstance(AggregionAPI) {
