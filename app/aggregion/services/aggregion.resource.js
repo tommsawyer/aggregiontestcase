@@ -8,10 +8,10 @@ class AggregionResource {
   }
 
   book(id) {
-    return this.resource(this.API.BASE_URL + '/public/catalog/:id', {}, {
+    return this.resource(this.API.BASE_URL + '/public/catalog/:id/:type', {}, {
       get:     { params: { id: id }, interceptor: this.interceptor},
       query:   { interceptor: this.interceptor, isArray: true },
-      bundles: { method: 'GET', isArray: true, params: { id: id + '/bundles/' }, interceptor: this.interceptor }
+      bundles: { method: 'GET', isArray: true, params: { id: id, type: 'bundles' }, interceptor: this.interceptor }
     });
   }
 
